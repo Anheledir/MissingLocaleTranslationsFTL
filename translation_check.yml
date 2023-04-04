@@ -19,7 +19,7 @@ runs:
         python -m pip install --upgrade pip
         pip install fluent fluent.syntax PyYAML python-frontmatter PyGithub
     - name: Run Translation Check
-      run: python ${{ github.workspace }}/compare_ftl.py
+      uses: Anheledir/MissingLocaleTranslationsFTL@v1
       env:
         REFERENCE_FTL: ${{ inputs.reference-ftl }}
         GITHUB_TOKEN: ${{ inputs.github-token }}
